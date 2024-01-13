@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: transparent;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.items {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 15%;
+    font-size: 1.2rem;
+    color: #BA9539;
+    background: #feefee;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.loginDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.loginDiv button{
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 110px;
+    font-weight: bold;
+}
+
+main {
+    padding: 0 15%;
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #79899B;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+    -webkit-text-stroke: 10px solid tan;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 7px;
+    background: #000;
+    margin-bottom: -7px;
+}
+
+h1:hover::after {
+    border-radius: 8px;
+    animation-duration: 2s;
+    animation-name: animeText;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */   
+}
+
+@keyframes animeText {
+    0% {
+        width: 0;
+        background: #000;
+    }
+    /* 25% {
+        background: green;
+        width: 25%;
+    }
+    50% {
+        background: red;
+        width: 50%;
+    }
+    75% {
+        background: green;
+        width: 75%;
+    } */
+    100% {
+        background: linear-gradient(to right, red 0%, green 50%, blue 100%);
+        width: 100%;
+    }
+}
+
+/* ///////////////////////////////////// */
+
+.marker {
+    width: 250px;
+    height: 40px;
+    margin: 20px auto;
+    border-radius: 8px 0 0 8px;
+}
+
+.cap {
+    width: 77px;
+    height: 40px;
+}
+
+.sleeve {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff80;
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+
+.cap,
+.sleeve {
+    display: inline-block;
+}
+
+.red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+.blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
